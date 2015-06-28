@@ -1,10 +1,11 @@
 source 'https://rubygems.org'
-
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.1'
 # Use mysql as the database for Active Record
 gem 'mysql2'
+
+# Localization
+gem 'rails-i18n'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
@@ -26,17 +27,25 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Active Record extension
 gem "squeel"
+# Make yaml file from DB
+gem 'yaml_db'
 # User authentication
 gem 'devise'
 # Decorator
 gem 'draper'
+# Simple form
+gem 'simple_form'
 # Pagination
 gem 'kaminari'
 # Handling tree structure
 gem 'acts_as_tree'
 # Draw chart
-gem "chartkick"
+gem 'lazy_high_charts'
 
+# Active Job
+gem 'responders'
+gem 'resque'
+gem 'resque-scheduler'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
@@ -82,6 +91,7 @@ group :development do
   gem 'capistrano-rails'
   gem 'capistrano-bundler', github: 'capistrano/bundler'
   gem 'capistrano3-unicorn'
+  gem 'mailcatcher'
 end
 
 group :test do

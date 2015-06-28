@@ -1,0 +1,23 @@
+<div class="bord-top">
+  <div class="row">
+    <div class="col-lg-8 col-sm-12">
+      <div class="chart">
+        <%= high_stock("chart", @chart) %>
+      </div>
+    </div>
+    <div class="col-lg-4 col-sm-12">
+      <div class="panel panel-default">
+        <div class="panel-heading" style="background-color: #fff;">
+          <h3 class="panel-title"><i class="fa fa-newspaper-o"></i> Financial News</h3>
+        </div>
+        <div class="panel-body">
+          <%= @rss_feeds.list %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="bord-bottom">
+  <%= render 'floaters/index' %>
+</div>

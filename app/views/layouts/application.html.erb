@@ -2,11 +2,20 @@
 <html>
 <head>
   <title>Floaton</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => false %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => false %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="<%= root_path %>"></a>
+    </div>
+    <div class="navbar-right" style="margin: 10px; color:#fff"><a href="#" style="color: #fff; font-size: 133%;"> <i class="fa fa-gear fa-lg"></i> Settings</a></div>
+  </div>
+</nav>
 
 <%= yield %>
 

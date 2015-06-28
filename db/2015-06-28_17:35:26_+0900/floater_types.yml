@@ -1,0 +1,25 @@
+
+---
+floater_types:
+  columns:
+  - id
+  - name
+  - description
+  - created_at
+  - updated_at
+  records: 
+  - - 1
+    - Threshold
+    - Simple threshold type.
+    - 2015-06-28 13:06:19.000000000 Z
+    - 2015-06-28 13:06:19.000000000 Z
+  - - 2
+    - Timer
+    - Simple time alert.
+    - 2015-06-28 13:06:19.000000000 Z
+    - 2015-06-28 13:06:19.000000000 Z
+  - - 3
+    - Speed
+    - Acceleration merter
+    - 2015-06-28 13:06:19.000000000 Z
+    - 2015-06-28 13:06:19.000000000 Z

@@ -1,0 +1,51 @@
+<div class="form-std">
+  <%= form_for(@floater) do |f| %>
+    <% if @floater.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@floater.errors.count, "error") %> prohibited this floater from being saved:</h2>
+
+        <ul>
+        <% @floater.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="field">
+      <%= f.label :floater_type_id %>
+      <div class="input">
+        <%= f.collection_select :floater_type_id, @floater_types, :id, :name %>
+      </div>
+    </div>
+    <div class="field">
+      <%= f.label :pair_id %>
+      <div class="input">
+        <%= f.collection_select :pair_id, @pairs, :pair_id, :name %>
+      </div>
+    </div>
+    <div class="field">
+      <%= f.label :value %>
+      <div class="input">
+        <%= f.text_field :value %>
+      </div>
+    </div>
+    <div class="field">
+      <%= f.label :start_at %>
+      <div class="input">
+        <%= f.datetime_select :start_at %>
+      </div>
+    </div>
+    <div class="field">
+      <%= f.label :end_at %>
+      <div class="input">
+        <%= f.datetime_select :end_at %>
+      </div>
+    </div>
+    <div class="actions">
+      <div>
+        <%= f.submit %>
+      </div>
+    </div>
+  <% end %>
+</div>

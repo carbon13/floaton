@@ -1,0 +1,3 @@
+get_xchanges:
+  cron: "*/1 * * * *"
+  description: "to get xchanges"

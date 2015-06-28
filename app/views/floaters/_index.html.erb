@@ -1,0 +1,51 @@
+<div class="panel panel-default">
+  <div class="panel-heading" style="background-color: #fff;">
+    <h3 class="panel-title"><i class="fa fa-line-chart"></i> Floaters</h3>
+  </div>
+  <div class="panel-body">
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Type</th>
+          <th>Pair</th>
+          <th>Threshold</th>
+          <th>Start at / End at</th>
+          <th>Status</th>
+          <th></th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% @floaters.each do |floater| %>
+          <tr>
+            <td><%= floater.id %></td>
+            <td><%= floater.floater_type.name %></td>
+            <td><%= floater.pair_id %></td>
+            <td><%= floater.value %></td>
+            <td><%= l floater.start_at, format: :short %> / <%= l floater.end_at, format: :short %></td>
+            <td>Wating</td>
+            <td>
+            <div class="btn-group">
+              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Select Ops. <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu">
+                <li><%= link_to 'Edit', edit_floater_path(floater) %></li>
+                <li><%= link_to 'Destroy', floater, method: :delete, data: { confirm: 'Are you sure?' } %></li>
+              </ul>
+            </div>
+            </td>
+          </tr>
+        <% end %>
+        <tr>
+        <td colspan="6"></td>
+        <td>
+          <div>
+            <button type="button" class="btn btn-default btn-success" style="color: #fff;" onClick="location.href='<%= new_floater_path %>'"><i class="fa fa-plus"></i> New Floater</button>
+          </div>
+        </td>
+      </tbody>
+    </table>
+  </div>
+</div>

@@ -1,0 +1,96 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+@import "cssreset-min";
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+@import "rss-feed";
+@import "jquery.sidr.dark";
+
+// Common definitions
+.bord-top {
+  padding: 5px;
+}
+
+.bord-bottom {
+  margin-top: 20px;
+  padding: 5px;
+}
+
+.form-std {
+  p.alert {
+    @extend .col-sm-12;
+  }
+  i, em {
+    text-align: center;
+  }
+  div {
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;    
+  }
+  form {
+    @extend .form-horizontal;
+    div.field {
+      @extend .form-group;
+      label {
+        @extend .col-lg-3;
+        @extend .col-sm-6;
+        @extend .control-label;
+      }
+      div.input {
+        @extend .col-lg-9;
+        @extend .col-sm-6;
+      }
+      div.field_with_errors {
+        background-color: f00;
+      }
+    }
+    div.checkbox {
+      @extend .col-sm-9;
+      @extend .col-sm-offset-3;
+      margin-top: -0.5em
+    }
+    div.actions div {
+      @extend .col-sm-9;
+      @extend .col-sm-offset-3;
+      padding-top: 1em;
+      input, a {
+        @extend .btn;
+        @extend .btn-primary;
+      }
+    }
+  }
+}
+
+
+// override boostrap css
+.navbar {
+  height: 85px;
+  background-image: image-url("bg_header.png");
+  background-repeat: repeat-x;
+  background-color: #fff;
+  border-bottom: none;
+
+  a.navbar-brand {
+    margin: 10px 0px 5px 10px;
+    background-image: image-url("logo.png");
+    background-repeat: none;
+    height: 41px;
+    width: 173px;
+  }
+}

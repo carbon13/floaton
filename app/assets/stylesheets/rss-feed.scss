@@ -1,0 +1,29 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+ul.rss-feed {
+  height: 200px;
+  overflow: auto;
+  font-size: 81%;
+  li {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      -moz-text-overflow: ellipsis; // for FF
+  }
+}
+
+li.rssHeader {
+  // overflow: hidden;
+  height: 100px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  -moz-text-overflow: ellipsis; // for FF
+}
+
+li.rssContent {
+  overflow: auto;
+  padding: 10px 0 10px 0;
+  border-bottom: 1px solid #ddd;
+}
